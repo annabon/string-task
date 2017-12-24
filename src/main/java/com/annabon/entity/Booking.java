@@ -23,7 +23,7 @@ public class Booking {
 
 
     @Column(name = "deadline")
-    Date deadline;
+    private Date deadline;
 
     public long getId() {
         return id;
@@ -37,7 +37,7 @@ public class Booking {
         return itemId;
     }
 
-    public void setItemId(long itemId) {
+    private void setItemId(long itemId) {
         this.itemId = itemId;
     }
 
@@ -50,7 +50,7 @@ public class Booking {
         return departmentID;
     }
 
-    public void setDepartmentID(long departmentID) {
+    private void setDepartmentID(long departmentID) {
         this.departmentID = departmentID;
     }
 
@@ -63,7 +63,7 @@ public class Booking {
         return employeeId;
     }
 
-    public void setEmployeeId(long employeeId) {
+    private void setEmployeeId(long employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -82,7 +82,7 @@ public class Booking {
         return this;
     }
 
-    public void setDeadline(Date deadline) {
+    private void setDeadline(Date deadline) {
         this.deadline = deadline;
     }
 }

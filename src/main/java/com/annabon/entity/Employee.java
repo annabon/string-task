@@ -11,7 +11,7 @@ public class Employee {
 
     @Id
     @GeneratedValue
-    long id;
+    private long id;
 
 
 
@@ -34,15 +34,25 @@ public class Employee {
         return departmentId;
     }
 
-    public void setDepartmentId(String departmentId) {
+    private void setDepartmentId(String departmentId) {
         this.departmentId = departmentId;
+    }
+
+    public Employee withDepartmentId(String departmentId){
+        this.setDepartmentId(departmentId);
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
+    }
+
+    public Employee withName(String name){
+        this.setName(name);
+        return this;
     }
 }

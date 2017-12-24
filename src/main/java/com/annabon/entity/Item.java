@@ -11,15 +11,15 @@ public class Item {
 
     @Id
     @GeneratedValue
-    long id;
+    private long id;
 
 
     @Column(name = "department_id")
-    long departmentId;
+    private long departmentId;
 
 
     @Column(name = "name")
-    String name;
+    private String name;
 
 
     public long getId() {
@@ -34,15 +34,25 @@ public class Item {
         return departmentId;
     }
 
-    public void setDepartmentId(long departmentId) {
+    private void setDepartmentId(long departmentId) {
         this.departmentId = departmentId;
+    }
+
+    public Item withDepartmentId(long departmentId){
+        this.setDepartmentId(departmentId);
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
+    }
+
+    public Item withName(String name){
+        this.setName(name);
+        return this;
     }
 }

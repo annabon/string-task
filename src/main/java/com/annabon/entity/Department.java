@@ -12,7 +12,7 @@ public class Department {
 
     @Id
     @GeneratedValue
-    long id;
+    private long id;
 
     @Column(name = "name")
     private String  name;
@@ -30,7 +30,12 @@ public class Department {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
+    }
+
+    public Department withName(String name){
+        this.setName(name);
+        return this;
     }
 }
