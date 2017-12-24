@@ -1,6 +1,7 @@
 package com.annabon.entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,7 +14,8 @@ public class Department {
     @GeneratedValue
     long id;
 
-    String  name;
+    @Column(name = "name")
+    private String  name;
 
 
     public long getId() {
